@@ -93,8 +93,6 @@ class CtiExampleBlock extends BlockBase implements ContainerFactoryPluginInterfa
         $article_tags[] = 'node:' . $article->id();
         // This is another way how to wrap the link in "h3" tag.
         /*$items[] = [
-          '#prefix' => '<h3>',
-          '#suffix' => '</h3>',
           '#type' => 'link',
           '#title' => [
             '#type' => 'html_tag',
