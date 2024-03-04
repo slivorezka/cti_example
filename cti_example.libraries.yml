@@ -1,0 +1,10 @@
+cti.example:
+  js:
+    js/cti-example.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+  css:
+    theme:
+      css/cti-example.css: {}
