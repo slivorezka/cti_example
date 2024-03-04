@@ -63,8 +63,6 @@ class CtiExampleBlock extends BlockBase implements ContainerFactoryPluginInterfa
    * {@inheritdoc}
    */
   public function build(): array {
-    $build = [];
-
     // Let's get the IDs of CT "Article" by "Entity Query" way.
     $query = $this->nodeStorage->getQuery()
       ->accessCheck()
