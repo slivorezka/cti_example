@@ -1,4 +1,4 @@
-(($, Drupal, once) => {
+(function ($, Drupal, once) {
 
   'use strict';
 
@@ -8,7 +8,7 @@
    * @type {Drupal~behavior}
    */
   Drupal.behaviors.ctiExampleBlock = {
-    attach: (context, settings) => {
+    attach: function (context, settings) {
       var $context = $(context);
 
       once('cti-example-block', 'html', $context).forEach(function () {

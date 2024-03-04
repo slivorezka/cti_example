@@ -85,7 +85,7 @@ class CtiExampleBlock extends BlockBase implements ContainerFactoryPluginInterfa
 
     /** @var \Drupal\node\NodeInterface $article */
     foreach ($articles as $article) {
-      // Let's check if it allowed to show the "Article" in list.
+      // Let's check if it is allowed to show the "Article" in list.
       if ($this->isArticleInlist($article)) {
         // Add cache dependency for each node.
         $article_tags[] = 'node:' . $article->id();

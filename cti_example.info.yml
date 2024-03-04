@@ -1,4 +1,4 @@
-name: 'CTI Example'
+name: 'CTI Example Block'
 type: module
 description: 'This module provides the CTI Example Block.'
 core_version_requirement: ^8 || ^9 || ^10
