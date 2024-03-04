@@ -69,7 +69,7 @@ class CtiExampleBlock extends BlockBase implements ContainerFactoryPluginInterfa
     $query = $this->nodeStorage->getQuery()
       ->accessCheck()
       ->condition('type', 'article')
-      // Also, we can exclude some Articles directly from the list in the query
+      // Also, we can exclude some Articles directly from the list in the query.
       // ->condition('field_show_in_list', 1);
       ->condition('status', NodeInterface::PUBLISHED);
 
@@ -91,6 +91,18 @@ class CtiExampleBlock extends BlockBase implements ContainerFactoryPluginInterfa
       if ($this->isArticleInlist($article)) {
         // Add cache dependency for each node.
         $article_tags[] = 'node:' . $article->id();
+        // This is another way how to wrap the link in "h3" tag.
+        /*$items[] = [
+          '#prefix' => '<h3>',
+          '#suffix' => '</h3>',
+          '#type' => 'link',
+          '#title' => [
+            '#type' => 'html_tag',
+            '#tag' => 'h3',
+            '#value' => $article->getTitle(),
+          ],
+          '#url' => $article->toUrl(),
+        ];*/
 
         $items[] = [
           '#prefix' => '<h3>',
