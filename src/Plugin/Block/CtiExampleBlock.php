@@ -69,6 +69,8 @@ class CtiExampleBlock extends BlockBase implements ContainerFactoryPluginInterfa
     $query = $this->nodeStorage->getQuery()
       ->accessCheck()
       ->condition('type', 'article')
+      // Also, we can exclude some Articles directly from the list in the query
+      // ->condition('field_show_in_list', 1);
       ->condition('status', NodeInterface::PUBLISHED);
 
     $article_ids = $query->execute();
